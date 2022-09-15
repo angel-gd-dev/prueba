@@ -1,0 +1,31 @@
+Prueba front-end TechPump Angel Jesús González Delgado.
+
+A continuación se detalla el proceso y tiempos empleados para la realización de la prueba:
+
+Día 1: 	13/09/2022 19:00 - 22:50
+
+		- Estudio Previo maquetación y funcionalidades (20min)
+
+		- Obtención de recursos: Typografias (Inter e Inconsolata - Google fonts / Liberator - local convertida a webfont usando https://transfonter.org/).
+			Iconografía svg y logos (Figma, icono de cerrar modal hecho por mí).
+			Favicon generado por mi.
+			Imagenes 1img de background descargada de la prueba.
+
+		- Identificación de plugins necesarios:
+			jQuery
+			CountDown
+			Creadas funcionalidades para crear toast y modales, para dar feedback al usuario.
+
+		- Maquetación.
+
+Día 2:	14/09/2022 18:30 - 22:00
+
+		- Funcionalidad de los pasos, planteamiento de persistencia almacenando la información en localStorage
+		- Revisión de la funcionalidad y maquetación en diferentes navegadores (Opera, Chrome, FireFox y Safari).
+		- Revisión y refactorización del código. (QA)
+
+Día 3:	15/09/2022 18:00 - 19:00
+
+		- Funcionalidades y maquetación de un modal simple añadidas al link del footer (contenido Lorem Ipsum).
+		- Revisión del diseño con el Figma.
+		- Revisión de efectos hover y animaciones

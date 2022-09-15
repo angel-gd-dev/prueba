@@ -1,0 +1,474 @@
+@font-face {
+	font-family: 'Liberator SIROKO';
+	src: url('../fonts/LiberatorSIROKO-Thin.eot');
+	src: url('../fonts/LiberatorSIROKO-Thin.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/LiberatorSIROKO-Thin.woff2') format('woff2'),
+	url('../fonts/LiberatorSIROKO-Thin.woff') format('woff'),
+	url('../fonts/LiberatorSIROKO-Thin.svg#LiberatorSIROKO-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberator SIROKO';
+    src: url('../fonts/LiberatorSIROKO-Light.eot');
+    src: url('../fonts/LiberatorSIROKO-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LiberatorSIROKO-Light.woff2') format('woff2'),
+        url('../fonts/LiberatorSIROKO-Light.woff') format('woff'),
+        url('../fonts/LiberatorSIROKO-Light.svg#LiberatorSIROKO-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberator SIROKO';
+    src: url('../fonts/LiberatorSIROKO-Medium.eot');
+    src: url('../fonts/LiberatorSIROKO-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LiberatorSIROKO-Medium.woff2') format('woff2'),
+        url('../fonts/LiberatorSIROKO-Medium.woff') format('woff'),
+        url('../fonts/LiberatorSIROKO-Medium.svg#LiberatorSIROKO-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberator SIROKO';
+    src: url('../fonts/LiberatorSIROKO-Heavy.eot');
+    src: url('../fonts/LiberatorSIROKO-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LiberatorSIROKO-Heavy.woff2') format('woff2'),
+        url('../fonts/LiberatorSIROKO-Heavy.woff') format('woff'),
+        url('../fonts/LiberatorSIROKO-Heavy.svg#LiberatorSIROKO-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberator SIROKO outline';
+    src: url('../fonts/LiberatorSIROKO-Outline.eot');
+    src: url('../fonts/LiberatorSIROKO-Outline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LiberatorSIROKO-Outline.woff2') format('woff2'),
+        url('../fonts/LiberatorSIROKO-Outline.woff') format('woff'),
+        url('../fonts/LiberatorSIROKO-Outline.svg#LiberatorSIROKO-Outline') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Css vars */
+:root {
+	--color-main: #311429;
+	--color-secondary: #C92F58;
+	--color-green: #339B95;
+
+	--gutter: 25px;
+}
+
+@media (min-width: 576px) {
+	:root {
+		--gutter: 35px;
+	}
+}
+@media (min-width: 768px) {
+	:root {
+		--gutter: 50px;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+
+	min-height: 100vh;
+
+	font-family: 'Inconsolata', monospace;
+	font-size: 16px;
+	line-height: 1.17em;
+	color: #FFF;
+}
+
+/* Layout basis */
+.container {
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+}
+
+.main {
+	flex: 1 0 auto;
+	height: 100%;
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+/* Typography */
+h1 {
+	font-family: 'Liberator SIROKO', sans-serif;
+	font-size: 35px;
+	line-height: 1em;
+	margin: 18px 0;
+}
+
+.content > *:last-child {margin-bottom: 0}
+
+/* Header */
+header {
+	padding: var(--gutter) 0;
+}
+
+section.main-content {
+}
+
+.badge {
+	border-radius: 3px;
+	color: #2C5E5B;
+	padding: 3px 7px;
+	font-size: 9px;
+	line-height: 1.17em;
+	background: var(--color-green);
+	text-transform: uppercase;
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+}
+
+.pane {
+	margin: 25px 0;
+	padding: 20px;
+	background-color: var(--color-main);
+	border-radius: 3px;
+}
+
+.pane__title {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	margin: 0 0 15px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #EFE5C3;
+}
+
+.form__radio {
+	display: grid;
+	grid-gap: 10px;
+	padding: 0;
+}
+ul.form__radio li {
+	list-style: none;
+}
+.form__radio--button {
+	padding: 13px 12px;
+	display: flex;
+	align-items: center;
+	background-color: rgba(255,255,255,0.09);
+	border-radius: 3px;
+	cursor: pointer;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.form__radio--button-circle {
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin-right: 1em;
+
+}
+
+.form__radio--button:hover {
+	background-color: rgba(201,47,88,0.5);
+}
+
+.form__radio--button.form__radio--button--active {
+	background-color: var(--color-secondary);
+}
+.form__radio--button .form__radio--button-circle::before {
+	content: '';
+	border-radius: 50%;
+	background: #fff;
+	display: block;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	position: relative;
+	width: 0;
+	height: 0;
+    transition: all 0.3s cubic-bezier(0, 0.4, 0.7, 3);
+}
+.form__radio--button.form__radio--button--active .form__radio--button-circle::before {
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	top: 2px;
+	left: 2px;
+}
+
+.form__button {
+	display: block;
+	width: 100%;
+	padding: 13px;
+	text-align: center;
+
+	cursor: pointer;
+
+	appearance: none;
+	-o-appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.form__button.form__button--submit {
+	background-color: var(--color-green);
+	border: 0 none;
+	border-radius: 3px;
+
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+
+	transition: background-color 0.3s ease-in-out;
+}
+.form__button .form__button--icon {
+	display: inline-block;
+	margin-left: 0.4em;
+	transition: transform 0.2s ease-in-out;
+}
+.form__button.form__button--submit:hover {
+	background-color: #35c5bc;
+}
+.form__button.form__button--submit:hover .form__button--icon {
+	transform: translateX(0.4em);
+}
+.form__button.form__button--outline {
+	display: inline-block;
+	width: auto;
+	font-size: 14px;
+	background: transparent;
+	color: #000;
+	border: 2px solid #000;
+	font-weight: 700;
+	flex: 0 0 auto;
+	margin-left: auto;
+	padding: 3px 5px;
+	font-family: 'Inconsolata', monospace;
+
+	transition: all 0.2s ease-in-out;
+}
+.form__button.form__button--outline:hover {
+	color: #fff;
+	background: #000;
+}
+.button--link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.form__code {
+	display: flex;
+	background: #fff;
+	color: #000;
+	padding: 10px 15px;
+	border-radius: 3px;
+}
+.form__code--text {
+	font-size: 25px;
+	line-height: 1em;
+	font-weight: 700;
+}
+
+.form__counter {
+	display: flex;
+	align-items: center;
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 3px;
+	margin-bottom: 16px;
+}
+.form__counter.form__counter--expired {
+	background-color: #C51414;
+}
+.form__counter.form__counter--expired .form__counter--icon {
+	animation: shake-bottom 4.72s ease infinite;
+}
+/* .form__counter .form__counter--expired-wrapper {
+	font-size: 1rem;
+} */
+.form__counter--icon {
+	margin-right: 15px;
+}
+.form__counter--clock {
+	font-size: 25px;
+	line-height: 1em;
+	font-weight: 700;
+}
+
+/* Footer */
+footer {
+	background: #000;
+	color: #fff;
+	margin-top: auto;
+	font-size: 14px;
+	font-weight: 400;
+	padding: var(--gutter) 0;
+}
+footer a {
+	color: #fff;
+	font-weight: 700;
+	transition: opacity 0.2s ease-in;
+}
+footer a:hover {
+	opacity: 0.7;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: var(--color-main);
+	background: white;
+}
+
+::selection {
+	color: var(--color-main);
+	background: var(--color-main);;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-14 22:33:48
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-bottom
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes shake-bottom {
+	0%,
+	16% {
+	-webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transform-origin: 50% 100%;
+	        transform-origin: 50% 100%;
+	}
+	3% {
+	-webkit-transform: rotate(3deg);
+	        transform: rotate(3deg);
+	}
+	6% {
+	-webkit-transform: rotate(-6deg);
+	        transform: rotate(-6deg);
+	}
+	9% {
+	-webkit-transform: rotate(10deg);
+	        transform: rotate(10deg);
+	}
+	12% {
+	-webkit-transform: rotate(-3deg);
+	        transform: rotate(-3deg);
+	}
+	15% {
+	-webkit-transform: rotate(3deg);
+	        transform: rotate(3deg);
+	}
+}
+@keyframes shake-bottom {
+	0%,
+	16% {
+	  -webkit-transform: rotate(0deg);
+	          transform: rotate(0deg);
+	  -webkit-transform-origin: 50% 100%;
+	          transform-origin: 50% 100%;
+	}
+	3% {
+	-webkit-transform: rotate(3deg);
+	        transform: rotate(3deg);
+	}
+	6% {
+	-webkit-transform: rotate(-6deg);
+	        transform: rotate(-6deg);
+	}
+	9% {
+	-webkit-transform: rotate(10deg);
+	        transform: rotate(10deg);
+	}
+	12% {
+	-webkit-transform: rotate(-3deg);
+	        transform: rotate(-3deg);
+	}
+	15% {
+	-webkit-transform: rotate(3deg);
+	        transform: rotate(3deg);
+	}
+}
+
+
+/* Modal */
+.modal__overlay {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+}
+.modal__wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.modal__body {
+	position: relative;
+	background-color: #fff;
+	color: #000;
+	border-radius: 3px;
+	z-index: 999;
+	width: 60%;
+	height: 60vh;
+	min-height: 300px;
+	display: flex;
+}
+.modal__content {
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal__close {
+	position: absolute;
+	left: auto;
+	top: -17px;
+	right: -10px;
+	background: #000;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.7);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.modal__close svg {
+	width: 12px;
+	height: auto;
+}
+.toast {font-weight: bold;}
